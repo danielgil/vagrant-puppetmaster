@@ -1,0 +1,22 @@
+# config/database.yml
+# 
+production:
+  database: dashboard
+  username: dashboard
+  password: <%= @dashboarddbpassword %>
+  encoding: utf8
+  adapter: mysql
+
+development:
+  database: dashboard_development
+  username: dashboard
+  password:
+  encoding: utf8
+  adapter: mysql
+
+test:
+  database: dashboard_test
+  username: dashboard
+  password:
+  encoding: utf8
+  adapter: mysql
