@@ -1,7 +1,7 @@
 vagrant-puppetmaster
 ====================
 
-This is an brief description of the steps required to automate the setup of a Puppet Master on CentOS 6.4  and Dashboard with Apache and Passenger.
+This is an example of how to automate the setup of a Puppet Master on CentOS 6.4  and Dashboard with Apache and Passenger.
 
 ## Create a base CentOS Box
 On your local machine, create a new VirtualBox VM and install CentOS 6.4 x86_64. When it's done, log into the machine an execute the following commands to configure several CentOS feature to play nice with Vagrant.
@@ -50,7 +50,12 @@ The VM is ready, we can now package and import it into Vagrant:
 
 You can customize serveral things in the Vagrant file, like the newtowork, database passwords for the Dashboard, etc.
 
-By default, the network is set to internal, with forwarded ports 80 -> 10080 and 443 -> 10443. For a production server you'll probably need to setup a DNS record, static IP, etc.
+By default, the network is set to internal, with the following forwarded ports:
+    * 80 -> 10080 
+    
+    * 443 -> 10443. 
+
+For a production server you'll probably need to do some extra work like configuring a static IP, DNS record, SELinux policy, etc.
 
 ## Start VM
 Run **vagrant up**. When the boot and provisioning process finishes, you'll be able to access the Puppet Dashboard at:
