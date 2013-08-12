@@ -1,32 +1,16 @@
+# Check https://github.com/purple52/librarian-puppet-vagrant for the 
+# original idea of installing Puppet Modules with librarian during the shell
+# provisioning phase
+
 forge "http://forge.puppetlabs.com"
-# 
-# mod "puppetlabs/razor"
-# mod "puppetlabs/ntp", "0.0.3"
-# 
 
-mod "puppetlabs/vcsrepo"
+# This modules will be available during the VM provisioning
+
+# Installed from Forge
+#mod "puppetlabs/vcsrepo"
+#mod "puppetlabs/firewall"
 mod "puppetlabs/stdlib"
-mod "puppetlabs/firewall"
-mod "rodjek/logrotate"
 
-mod "skye",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
-mod "bacula-client",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
-mod "base-firewall",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
-mod "java",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
-mod "repos",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
-mod "ssh",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
-mod "unattended-updates",
-   :git => "https://git.innoveo.com/scm/inf/puppet.git"
-
+# Installed from private Git repo
+mod "my-mod",
+   :git => "https://url/to/my/module/repo.git"
