@@ -1,7 +1,9 @@
 vagrant-puppetmaster
 ====================
 
-This is an example of how to automate the setup of a Puppet Master on CentOS 6.4  and Dashboard with Apache and Passenger.
+This is a Vagrant project that automates the setup of a Puppet Master on CentOS 6.4  and Dashboard with Apache and Passenger.
+
+Below you can find a short description of the steps to create an initial CentOS box.
 
 ## Create a base CentOS Box
 On your local machine, create a new VirtualBox VM and install CentOS 6.4 x86_64. When it's done, log into the machine an execute the following commands to configure several CentOS feature to play nice with Vagrant.
