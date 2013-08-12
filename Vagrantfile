@@ -7,11 +7,11 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Box settings
-  config.vm.box = "skyevm"
+  config.vm.box = "puppetmaster"
   # config.vm.box_url = "http://domain.com/path/to/above.box"
 
   # Network
-  config.vm.hostname = "testmaster.innoveo.com"
+  config.vm.hostname = "puppetmaster.localdomain.tld"
   config.vm.network :forwarded_port, guest: 80, host: 10080
   config.vm.network :forwarded_port, guest: 443, host: 10443
   #config.vm.network :private_network, ip: "1.2.3.4"
