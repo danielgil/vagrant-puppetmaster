@@ -1,0 +1,32 @@
+forge "http://forge.puppetlabs.com"
+# 
+# mod "puppetlabs/razor"
+# mod "puppetlabs/ntp", "0.0.3"
+# 
+
+mod "puppetlabs/vcsrepo"
+mod "puppetlabs/stdlib"
+mod "puppetlabs/firewall"
+mod "rodjek/logrotate"
+
+mod "skye",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+
+mod "bacula-client",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+
+mod "base-firewall",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+
+mod "java",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+
+mod "repos",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+
+mod "ssh",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+
+mod "unattended-updates",
+   :git => "https://git.innoveo.com/scm/inf/puppet.git"
+

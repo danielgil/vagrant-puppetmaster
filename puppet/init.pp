@@ -5,7 +5,7 @@
         owner       => 'root',
         group       => 'root',
         mode        => '644',
-        content     => template('/vagrant/templates/puppet.conf.erb'),
+        content     => template('/vagrant/puppet/templates/puppet.conf.erb'),
         
     }
 
@@ -14,7 +14,7 @@
         owner       => 'root',
         group       => 'root',
         mode        => '644',
-        content     => template('/vagrant/templates/dashboard-vhost.conf.erb'),
+        content     => template('/vagrant/puppet/templates/dashboard-vhost.conf.erb'),
     }
 
     file {"/etc/httpd/conf.d":
@@ -32,7 +32,7 @@
         owner       => 'puppet-dashboard',
         group       => 'puppet-dashboard',
         mode        => '640',
-        content     => template('/vagrant/templates/database.yml.erb'),
+        content     => template('/vagrant/puppet/templates/database.yml.erb'),
         require     => Package['puppet-dashboard'],
     }
 

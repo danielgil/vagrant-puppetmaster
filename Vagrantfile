@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.box_url = "http://domain.com/path/to/above.box"
 
   # Network
-  config.vm.hostname = "puppetmaster.localdomain.tld"
+  config.vm.hostname = "testmaster.innoveo.com"
   config.vm.network :forwarded_port, guest: 80, host: 10080
   config.vm.network :forwarded_port, guest: 443, host: 10443
   #config.vm.network :private_network, ip: "1.2.3.4"
@@ -21,10 +21,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.forward_agent = true
 
   # Provisioning
-  config.vm.provision :shell, :path => "scripts/bootstrap-master.sh"
+  config.vm.provision :shell, :path => "shell/bootstrap-master.sh"
 
   config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "manifests"
+    puppet.manifests_path = "puppet"
     puppet.manifest_file = "init.pp"
     puppet.facter = {
       :dashboarduser => "puppeteer",
@@ -40,4 +40,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
+  # config.vm.provision :puppet do |puppet|
+  #   puppet.manifests_path = "manifests"
+  #   puppet.manifest_file  = "init.pp"
+  # end
 end
